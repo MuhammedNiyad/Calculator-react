@@ -1,0 +1,12 @@
+import React, { useReducer } from "react";
+import App from "./App";
+import reducer from "./operations";
+
+export default function Parent() {
+    const [state, dispatch] = useReducer(reducer, "");
+    return (
+        <>
+            <App state={state} dispatch={dispatch} />
+        </>
+    );
+};
