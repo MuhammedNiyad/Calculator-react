@@ -28,8 +28,8 @@ const actions = {
         if (state === "") {
             return state;
         } else {
-            console.log(Math.evaluate(state));
-            return Math.evaluate(state);
+            console.log(eval(state));
+            return eval(state);
         }
     },
 
