@@ -10,7 +10,7 @@ export default function App() {
   return(
     <div className="App bg-slate-900 w-full h-screen text-center flex flex-col justify-center items-center">
         <h1 className="text-gray-700 text-3xl">Reactjs Calculator</h1>
-        <div className="calc-wrapper w-[500px] h-auto border-10 border-ridge border-gray-700 overflow-hidden">
+        <div className="calc-wrapper w-[500px] h-auto rounded-[10px] overflow-hidden">
             <Input Input = {state}></Input>
             <div className="row flex w-full">
                 <Button onClick={()=> dispatch({type: 'addtoInputNum', param: "7"})}>7</Button>
@@ -24,14 +24,14 @@ export default function App() {
                 <Button onClick={()=> dispatch({type: 'addtoInputNum', param: "5"})}>5</Button>
                 <Button onClick={()=> dispatch({type: 'addtoInputNum', param: "6"})}>6</Button>
                 <Button onClick={()=> dispatch({type: 'addtoInputOpr', param: "*"})}>x</Button>
-                <Button onClick={()=> dispatch({type: 'handleCube'})}>x³</Button>
+                <Button onClick={()=> dispatch({type: 'handleCube'})}>a³</Button>
             </div>
             <div className="row flex w-full">
                 <Button onClick={()=> dispatch({type: 'addtoInputNum', param: "1"})}>1</Button>
                 <Button onClick={()=> dispatch({type: 'addtoInputNum', param: "2"})}>2</Button>
                 <Button onClick={()=> dispatch({type: 'addtoInputNum', param: "3"})}>3</Button>
                 <Button onClick={()=> dispatch({type: 'addtoInputOpr', param: "+"})}>+</Button>
-                <Button onClick={()=> dispatch({type: 'handleCube'})}>x²</Button>
+                <Button onClick={()=> dispatch({type: 'handleSquare'})}>a²</Button>
             </div>
             <div className="row flex w-full">
                 <Button onClick={()=> dispatch({type: 'addtoInputNum', param: "."})}>.</Button>

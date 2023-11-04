@@ -1,10 +1,9 @@
-// import * as math from "mathjs";
 
 const operatsArr = ['*', '/', '+', '-']
 
 const actions = {
     handleClear() {
-        console.clear();
+        // console.clear();
         return "";
     },
 
@@ -28,7 +27,7 @@ const actions = {
         if (state === "") {
             return state;
         } else {
-            console.log(eval(state));
+            // console.log(eval(state));
             return eval(state);
         }
     },
@@ -60,7 +59,7 @@ const actions = {
 };
 
 export default function reducer(state, action) {
-    console.log(state, action);
+    // console.log(state, action);
     let type = action.type;
     let param = action.param;
     return actions[type](state, param);
